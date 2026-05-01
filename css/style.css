@@ -119,6 +119,15 @@ body {
   background: var(--color-brand-light);
 }
 
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  color: var(--color-primary);
+}
+
 /* Hero */
 .hero {
   padding: var(--space-12) 0;
@@ -669,6 +678,28 @@ body {
     gap: var(--space-4);
   }
 
+  .nav {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 13px;
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
@@ -681,7 +712,10 @@ body {
     font-size: 28px;
   }
 
-  .tools-grid {
+  .tools-grid,
+  .github-grid,
+  .github-grid-full,
+  .ai-grid {
     grid-template-columns: 1fr;
   }
 }
