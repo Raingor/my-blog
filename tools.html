@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工具收藏 - 叶荣的技术笔记</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tools">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">叶荣的技术笔记</a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="blog.html">文章</a>
+        <a href="tools.html">工具</a>
+        <a href="about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">工具收藏</h1>
+      <p style="color: var(--color-text-secondary); margin-bottom: var(--space-6);">
+        日常开发和效率工具收藏，持续更新中...
+      </p>
+
+      <!-- Tools will be rendered here -->
+      <div id="tools-content">
+        <div class="tools-grid">
+          <!-- Frontend Tools -->
+          <div class="tool-category">
+            <h2>前端开发</h2>
+            <div class="tools-grid">
+              <a href="https://vuejs.org/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">V</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Vue.js</div>
+                  <div class="tool-item-desc">渐进式 JavaScript 框架</div>
+                </div>
+              </a>
+              <a href="https://react.dev/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">R</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">React</div>
+                  <div class="tool-item-desc">用于构建用户界面的 JavaScript 库</div>
+                </div>
+              </a>
+              <a href="https://tailwindcss.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">T</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Tailwind CSS</div>
+                  <div class="tool-item-desc">实用优先的 CSS 框架</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Backend Tools -->
+          <div class="tool-category">
+            <h2>后端开发</h2>
+            <div class="tools-grid">
+              <a href="https://nodejs.org/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">N</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Node.js</div>
+                  <div class="tool-item-desc">JavaScript 运行时</div>
+                </div>
+              </a>
+              <a href="https://python.org/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">Py</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Python</div>
+                  <div class="tool-item-desc">强大的编程语言</div>
+                </div>
+              </a>
+              <a href="https://go.dev/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">Go</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Go</div>
+                  <div class="tool-item-desc">简洁高效的编程语言</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- AI Coding Tools -->
+          <div class="tool-category">
+            <h2>AI Coding</h2>
+            <div class="tools-grid">
+              <a href="https://claude.ai/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">C</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Claude</div>
+                  <div class="tool-item-desc">AI 助手</div>
+                </div>
+              </a>
+              <a href="https://github.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">GH</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">GitHub</div>
+                  <div class="tool-item-desc">代码托管平台</div>
+                </div>
+              </a>
+              <a href="https://copilot.github.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">G</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">GitHub Copilot</div>
+                  <div class="tool-item-desc">AI 结对编程工具</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dev Tools -->
+          <div class="tool-category">
+            <h2>开发工具</h2>
+            <div class="tools-grid">
+              <a href="https://code.visualstudio.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">VS</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">VS Code</div>
+                  <div class="tool-item-desc">代码编辑器</div>
+                </div>
+              </a>
+              <a href="https://obsidian.md/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">Ob</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Obsidian</div>
+                  <div class="tool-item-desc">Markdown 笔记工具</div>
+                </div>
+              </a>
+              <a href="https://www.docker.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">D</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Docker</div>
+                  <div class="tool-item-desc">容器化平台</div>
+                </div>
+              </a>
+              <a href="https://git-scm.com/" target="_blank" class="tool-item">
+                <div class="tool-item-icon">G</div>
+                <div class="tool-item-content">
+                  <div class="tool-item-title">Git</div>
+                  <div class="tool-item-desc">版本控制系统</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Powered by 纯 HTML + CSS + JS</p>
+    </div>
+  </footer>
+</body>
+</html>
