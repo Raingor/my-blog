@@ -569,6 +569,65 @@ body {
   color: var(--color-brand-deep);
 }
 
+/* AI Platform Cards */
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.ai-card {
+  display: block;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.ai-card:hover {
+  border-color: var(--color-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 226, 153, 0.1);
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.ai-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.ai-card:hover .ai-card-icon {
+  background: var(--color-brand) !important;
+}
+
+.ai-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.ai-card-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
 /* Footer */
 .footer {
   padding: var(--space-8) 0;
