@@ -218,6 +218,14 @@
     CATEGORIES
   };
 
+  // Mobile menu toggle
+  window.toggleMobileMenu = function() {
+    const nav = document.querySelector('.nav');
+    if (nav) {
+      nav.classList.toggle('active');
+    }
+  };
+
   // Initialize on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
@@ -226,11 +234,3 @@
   }
 
 })();
-
-// Mobile menu toggle
-function toggleMobileMenu() {
-  const nav = document.querySelector('.nav');
-  if (nav) {
-    nav.classList.toggle('active');
-  }
-}
