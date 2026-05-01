@@ -20,6 +20,15 @@
   function init() {
     const page = document.body.dataset.page;
 
+    // Highlight current nav link
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === page + '.html' || (page === 'home' && href === 'index.html')) {
+        link.classList.add('active');
+      }
+    });
+
     switch(page) {
       case 'home':
         loadHomePage();

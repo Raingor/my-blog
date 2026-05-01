@@ -114,6 +114,11 @@ body {
   background: var(--color-brand-light);
 }
 
+.nav a.active {
+  color: var(--color-brand);
+  background: var(--color-brand-light);
+}
+
 /* Hero */
 .hero {
   padding: var(--space-12) 0;
