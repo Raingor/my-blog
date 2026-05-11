@@ -144,6 +144,9 @@
         metaContainer.innerHTML = `
           <span>${result.meta.date}</span>
           ${result.meta.tags ? result.meta.tags.map(t => `<span class="tag">${t}</span>`).join('') : ''}
+          <span id="busuanzi_container_page_pv">
+            <span id="busuanzi_value_page_pv"></span> 次阅读
+          </span>
         `;
       }
 
