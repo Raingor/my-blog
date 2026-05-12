@@ -7,7 +7,7 @@ theme = 'PaperMod'
 [params]
   author = "叶荣"
   description = "2016年起从业，前端开发/Vibe Coding/技术笔记"
-  keywords = ["技术博客", "前端", "Python", "PHP"]
+  keywords = ["技术博客", "前端", "Python", "PHP", "Vibe Coding"]
 
 [[menu.main]]
   identifier = "posts"
@@ -26,6 +26,22 @@ theme = 'PaperMod'
   name = "关于"
   url = "/about/"
   weight = 3
+
+[[menu.main]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/index.xml"
+  weight = 4
+
+[params.assets]
+  disableHLJS = true
+
+[mediaTypes."application/rss+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "index"
 
 [pagination]
   pagerSize = 10
