@@ -11,9 +11,12 @@
   // Categories
   const CATEGORIES = {
     all: { name: '全部', color: '' },
+    ai: { name: 'AI', color: '#c37d0d' },
     frontend: { name: '前端', color: '#18E299' },
     backend: { name: '后端', color: '#3772cf' },
-    'ai-coding': { name: 'AI Coding', color: '#c37d0d' }
+    devops: { name: '运维', color: '#6b5b95' },
+    git: { name: 'Git', color: '#f05033' },
+    other: { name: '其他', color: '#888888' }
   };
 
   // Initialize app
@@ -164,12 +167,8 @@
 
   // Load tools page
   async function loadToolsPage() {
-    const container = document.getElementById('tools-content');
-    if (!container) return;
-
-    // Tools are loaded from static data for now
-    // Can be extended to parse bookmarks file
-    container.innerHTML = '<p>工具收藏页面开发中...</p>';
+    // Tools are loaded from static HTML, no dynamic loading needed
+    return;
   }
 
   // Load all articles from registry
