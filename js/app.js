@@ -45,6 +45,12 @@
       case 'tools':
         loadToolsPage();
         break;
+      case 'github':
+        loadGithubPage();
+        break;
+      case 'ai':
+        loadAiPage();
+        break;
     }
   }
 
@@ -167,9 +173,81 @@
 
   // Load tools page
   async function loadToolsPage() {
-    // Tools are loaded from static HTML, no dynamic loading needed
-    return;
+    initCategoryFilter('tools-content', {
+      all: '全部',
+      'frontend': '前端开发',
+      'backend': '后端开发',
+      'ai': 'AI Coding',
+      'devtools': '开发工具'
+    });
   }
+
+  // Load GitHub page
+  async function loadGithubPage() {
+    initCategoryFilter('github-content', {
+      all: '全部',
+      'ai-agent': 'AI / Agent',
+      'php-backend': 'PHP / 后端',
+      'frontend': '前端',
+      'design': '设计 / 动画',
+      'game': '游戏 / Unity',
+      'other': '其他工具'
+    });
+  }
+
+  // Load AI page
+  async function loadAiPage() {
+    initCategoryFilter('ai-content', {
+      all: '全部',
+      'international': '国际平台',
+      'domestic': '国内平台',
+      'proxy': '聚合代理',
+      'community': '模型社区'
+    });
+  }
+
+  // Initialize category filter for a page
+  function initCategoryFilter(containerId, categories) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const pillContainer = document.getElementById('category-pills');
+    if (!pillContainer) return;
+
+    const params = new URLSearchParams(window.location.search);
+    let current = params.get('cat') || 'all';
+
+    pillContainer.innerHTML = Object.entries(categories).map(([key, label]) => `
+      <button class="category-pill ${key === current ? 'active' : ''}"
+              onclick="window.filterCategory('${key}')">
+        ${label}
+      </button>
+    `).join('');
+
+    filterSections(container, current);
+  }
+
+  function filterSections(container, category) {
+    const sections = container.querySelectorAll('.tool-category');
+    sections.forEach(section => {
+      const cat = section.dataset.category;
+      if (category === 'all' || cat === category) {
+        section.style.display = '';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  }
+
+  window.filterCategory = function(category) {
+    const url = new URL(window.location);
+    if (category === 'all') {
+      url.searchParams.delete('cat');
+    } else {
+      url.searchParams.set('cat', category);
+    }
+    window.location = url;
+  };
 
   // Load all articles from registry
   async function loadAllArticles() {
