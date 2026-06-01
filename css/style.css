@@ -349,6 +349,35 @@ body::before {
   font-size: 0.95rem;
 }
 
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skill-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.skill-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-brand);
+  min-width: 70px;
+  padding: var(--space-xs) 0;
+  text-align: right;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
 /* Timeline */
 .timeline {
   display: flex;
